@@ -1,0 +1,154 @@
+html {
+	width: 100%; height: 100%; overflow: hidden;
+}
+body {
+	overflow: hidden; font-family: "futura-pt", sans-serif; font-size: 16px; min-height: 100%;
+}
+header {
+	transition:500ms; width: 100vh; height: 100%; opacity: 0;
+}
+header.show {
+	opacity: 1;
+}
+header a {
+	transition:250ms; color: rgb(0, 0, 0); font-size: 1em; text-decoration: underline; display: block; position: fixed; z-index: 50; opacity: 0.7;
+}
+header a:hover {
+	opacity: 1;
+}
+header a.header--menu {
+	left: 20px; top: 20px;
+}
+header a.header--who {
+	top: 20px; right: 20px;
+}
+header a.header--mute {
+	left: 20px; bottom: 20px;
+}
+header a.header--facebook {
+	right: 90px; bottom: 20px;
+}
+@media screen and (max-width:800px)
+{
+header a.header--mute {
+	display: none;
+}
+header a.header--facebook {
+	left: 20px; bottom: 20px;
+}
+}
+header a.header--tweet {
+	right: 20px; bottom: 20px;
+}
+header .header--hit--up {
+	left: 0px; width: 100%; height: 5vh; bottom: 0px; position: fixed; z-index: 40;
+}
+header .header--hit--down {
+	left: 0px; width: 100%; height: 5vh; bottom: 0px; position: fixed; z-index: 40;
+}
+@media screen and (max-width:800px)
+{
+header .header--hit--up {
+	display: none;
+}
+header .header--hit--down {
+	display: none;
+}
+}
+header .header--hit--up {
+	top: 0px;
+}
+header .header--hit--up:hover div {
+	top: 0px; opacity: 0.9;
+}
+header .header--hit--down:hover div {
+	bottom: 0px; opacity: 0.9;
+}
+header .header--hit--up div {
+	background-position: bottom; transition:bottom 500ms, opacity 1500ms; width: 100%; height: 15vh; bottom: -15vh; position: absolute; opacity: 0; background-image: url("../img/NextPanel_button.svg"); background-repeat: no-repeat; background-size: 139px 64px;
+}
+header .header--hit--down div {
+	background-position: bottom; transition:bottom 500ms, opacity 1500ms; width: 100%; height: 15vh; bottom: -15vh; position: absolute; opacity: 0; background-image: url("../img/NextPanel_button.svg"); background-repeat: no-repeat; background-size: 139px 64px;
+}
+header .header--hit--up div {
+	background-position: top; transition:top 500ms, opacity 1000ms; top: -15vh; background-image: url("../img/PreviousPanel_button.svg");
+}
+nav {
+	background: rgb(255, 255, 255); transition:800ms; top: 0px; width: 100%; height: 100%; position: absolute; z-index: 0; min-height: 100%; opacity: 100; pointer-events: none;
+}
+.open {
+	opacity: 1; pointer-events: auto;
+}
+.nav-inner {
+	height: 100%; position: relative; min-height: 100%;
+}
+.nav-inner .close {
+	left: 0px; top: 0px; width: 100%; height: 40px; text-align: center; color: rgb(0, 0, 0); padding-top: 8px; position: absolute; z-index: 50; box-sizing: border-box;
+}
+ul {
+	list-style: none; margin: 0px; padding: 40px 0px 0px; width: 100%; display: flex; box-sizing: border-box; flex-wrap: wrap;
+}
+ul li {
+	width: calc(100% * (1/7)); text-align: center; overflow: hidden; display: block; box-sizing: border-box; flex-grow: 1;
+}
+@media screen and (max-width:800px)
+{
+ul li {
+	width: 25vw;
+}
+}
+ul li a {
+	width: 100%; height: 25vh; color: rgb(0, 0, 0); font-size: 1em; font-weight: 500; text-decoration: none; display: table; position: relative; cursor: pointer;
+}
+@media screen and (max-width:800px)
+{
+ul li a {
+	height: 14.28vh;
+}
+}
+ul li a span {
+	left: 0px; top: 50%; width: 100%; text-align: center; text-decoration: underline; margin-top: -12px; position: absolute; z-index: 10;
+}
+ul li a .overlay-right {
+	background: rgba(255, 255, 255, 0.3); transition:400ms; width: 100%; height: 100%; right: -100%; position: absolute; z-index: 5; -webkit-clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%);
+}
+ul li a .overlay-left {
+	background: rgba(255, 255, 255, 0.3); transition:400ms 100ms; left: -100%; width: 100%; height: 100%; position: absolute; z-index: 5; -webkit-clip-path: polygon(0 100%, 100% 100%, 0 0, 0 100%);
+}
+@media screen and (min-width:800px)
+{
+ul li a:hover .overlay-right {
+	right: -1px;
+}
+ul li a:hover .overlay-left {
+	left: -1px;
+}
+}
+.container {
+	margin: 0px; left: 0px; top: 0px; width: 100%; overflow: hidden; position: absolute; min-height: 100%;
+}
+.container--inner {
+	transition:top 500ms; left: 0px; top: 0px; width: 100%; height: auto; position: absolute;
+}
+.container--inner.notransition {
+	transition:none;
+}
+.letters {
+	width: 100%; height: 100%; display: flex; flex-wrap: wrap;
+}
+.grid--item {
+	width: 50%;
+}
+.grid--item.full {
+	width: 100%; height: 100%;
+}
+@media screen and (max-width:800px)
+{
+.grid--item {
+	width: 100%;
+}
+}
+
+.myPage{
+	color: rgb(52, 199, 231);
+}
